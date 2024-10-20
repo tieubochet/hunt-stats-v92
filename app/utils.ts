@@ -27,7 +27,7 @@ export function appURL() {
 
 export function vercelURL() {
   return process.env.VERCEL_URL
-    ? `https://hunt-stats-v92.3.vercel.app/`
+    ? `https://hunt-stats-v92.4.vercel.app/`
     : undefined;
 }
 
