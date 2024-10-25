@@ -145,7 +145,7 @@ const frameHandler = frames(async (ctx) => {
   const shareUrl = `https://warpcast.com/~/compose?text=${shareText}&embeds[]=${encodeURIComponent(
     appURL() +
       (fid
-        ? `?userfid=${fid}&c=${cacheBust}`
+        ? `?userfid=${fid}&cache=${cacheBust}`
         : `?c=${cacheBust}`)
   )}`;
 
