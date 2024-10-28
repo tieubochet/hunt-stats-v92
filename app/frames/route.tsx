@@ -129,8 +129,8 @@ const frameHandler = frames(async (ctx) => {
   };
   const shareText = encodeURIComponent(
     userData
-      ? `Check yours`
-      : `Check yours`
+      ? `Check yours HUNT STATS`
+      : `Check yours HUNT STATS`
   );
 
   // Change the url here
