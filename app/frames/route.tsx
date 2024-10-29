@@ -55,7 +55,7 @@ const frameHandler = frames(async (ctx) => {
       const parsedUrl = new URL(url);
       let fid = parsedUrl.searchParams.get("userfid");
 
-      console.log("Extracted FID from URL:", fid);
+      //console.log("Extracted FID from URL:", fid);
       return fid;
     } catch (e) {
       console.error("Error parsing URL:", e);
@@ -67,7 +67,7 @@ const frameHandler = frames(async (ctx) => {
 
   if (ctx.message?.requesterFid) {
     fid = ctx.message.requesterFid.toString();
-    console.log("Using requester FID:", fid);
+    //console.log("Using requester FID:", fid);
   } else if (ctx.url) {
     fid = extractFid(ctx.url.toString());
     console.log("Extracted FID from URL:", fid);
@@ -156,13 +156,13 @@ const frameHandler = frames(async (ctx) => {
   if (!userData) {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
-        Check yours
+        Check yours Hunt stats
       </Button>
     );
   } else {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
-        Check yours
+        Check yours Hunt stats
       </Button>,
       <Button action="link" target={shareUrl}>
         Share
