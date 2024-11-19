@@ -113,7 +113,7 @@ const frameHandler = frames(async (ctx) => {
 
   const ScoreScreen = () => {
     return (
-      <div tw="flex flex-col flex-nowrap justify-center items-center w-full h-full bg-[#FF6A72] text-[40px] text-[#fff]">
+      <div tw="flex flex-col flex-nowrap justify-center items-center w-full h-full bg-[#333333] text-[40px] text-[#fff]">
           <div tw="flex"><img
               src={userData?.profileImageUrl}
               alt="Profile"
