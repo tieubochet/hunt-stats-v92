@@ -99,10 +99,10 @@ const frameHandler = frames(async (ctx) => {
     if (huntstatsdata.ok) {
       huntstatsJSON = await huntstatsdata.json();
     } else {
-      console.error('Lỗi server hoặc phản hồi không hợp lệ:', huntstatsdata.status);
+      console.error('Error:', huntstatsdata.status);
     }
   } catch (error) {
-    console.error('Lỗi khi fetch dữ liệu:', error);
+    console.error('Fetch data error:', error);
   }
 
   const SplashScreen = () => (
@@ -156,13 +156,13 @@ const frameHandler = frames(async (ctx) => {
   if (!userData) {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
-        Check yours Hunt stats
+        Check your Hunt stats
       </Button>
     );
   } else {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
-        Check yours Hunt stats
+        Check your Hunt stats
       </Button>,
       <Button action="link" target={shareUrl}>
         Share
