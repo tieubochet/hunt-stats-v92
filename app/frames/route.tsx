@@ -120,9 +120,9 @@ const frameHandler = frames(async (ctx) => {
               tw="w-32 h-32 rounded-md mb-2 border border-[#fff]"
             /></div>
           <div tw="flex text-[#fff]">@{huntstatsJSON.username}</div>
-          <div tw="flex mb-3 mt-5">Daily Allowance: <span tw="flex text-[#FFF59D] ml-5 mr-5">{formatNumber(huntstatsJSON.tip_allowance)}</span></div>
-          <div tw="flex mb-3">Remaining: <span tw="flex text-[#FFF59D] ml-5 mr-5">{formatNumber(huntstatsJSON.remaining_allowance)}</span></div>
-          <div tw="flex mb-15">Received: <span tw="flex text-[#FFF59D] ml-5 mr-5">{formatNumber(huntstatsJSON.received)}</span></div>
+          <div tw="flex mb-3 mt-5">Allowance: <span tw="flex text-[#FFF59D] ml-5 mr-5">{formatNumber(huntstatsJSON.tip_allowance)}</span></div>
+          <div tw="flex mb-3">Daily Remaining: <span tw="flex text-[#FFF59D] ml-5 mr-5">{formatNumber(huntstatsJSON.remaining_allowance)}</span></div>
+          <div tw="flex mb-15">Total Received: <span tw="flex text-[#FFF59D] ml-5 mr-5">{formatNumber(huntstatsJSON.received)}</span></div>
           
       </div>
     );
@@ -146,7 +146,7 @@ const frameHandler = frames(async (ctx) => {
     appURL() +
       (fid
         ? `?userfid=${fid}&c=${cacheBust}`
-        : `?c=${cacheBust}`)
+        : `?cache=${cacheBust}`)
   )}`;
 
   //const checkStatusUrl = `${appURL()}?userfid=${fidEncoded}&c=${cacheBust}`;
@@ -156,13 +156,13 @@ const frameHandler = frames(async (ctx) => {
   if (!userData) {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
-        Check your Hunt stats
+        Check yours HUNT STATS
       </Button>
     );
   } else {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
-        Check your Hunt stats
+        Check yours HUNT STATS
       </Button>,
       <Button action="link" target={shareUrl}>
         Share
