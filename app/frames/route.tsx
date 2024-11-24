@@ -80,7 +80,7 @@ const frameHandler = frames(async (ctx) => {
     console.log("Using FID from state:", fid);
   }
 
-  console.log("Final FID used:", fid);
+  //console.log("Final FID used:", fid);
 
   const shouldFetchData =
     fid && (!userData || (userData as UserData).fid !== fid);
@@ -107,7 +107,7 @@ const frameHandler = frames(async (ctx) => {
 
   const SplashScreen = () => (
     <div tw="flex flex-col flex-nowrap justify-center items-center w-full h-full bg-[#fff] text-[#FF6A72] text-[60px]">
-      Check yours
+      Check yours HUNT STATS
     </div>
   );
 
@@ -120,7 +120,7 @@ const frameHandler = frames(async (ctx) => {
               tw="w-32 h-32 rounded-md mb-2 border border-[#fff]"
             /></div>
           <div tw="flex text-[#fff]">@{huntstatsJSON.username}</div>
-          <div tw="flex mb-3 mt-5">Allowance: <span tw="flex text-[#ffdc00] ml-5 mr-5">{formatNumber(huntstatsJSON.tip_allowance)}</span></div>
+          <div tw="flex mb-3 mt-5">Daily Allowance: <span tw="flex text-[#ffdc00] ml-5 mr-5">{formatNumber(huntstatsJSON.tip_allowance)}</span></div>
           <div tw="flex mb-3">Daily Remaining: <span tw="flex text-[#ffdc00] ml-5 mr-5">{formatNumber(huntstatsJSON.remaining_allowance)}</span></div>
           <div tw="flex mb-15">Total Received: <span tw="flex text-[#ffdc00] ml-5 mr-5">{formatNumber(huntstatsJSON.received)}</span></div>
           
@@ -139,14 +139,14 @@ const frameHandler = frames(async (ctx) => {
     fid ? `?userfid=${fid}&c=${cacheBust}` : `?userfid=${fid}&c=${cacheBust}`
   }`; 
   */
-  const cacheBust = new Date().getTime();
+  const cache = new Date().getTime();
   //const fidEncoded = fid ? encodeURIComponent(fid) : "";
 
   const shareUrl = `https://warpcast.com/~/compose?text=${shareText}&embeds[]=${encodeURIComponent(
     appURL() +
       (fid
-        ? `?userfid=${fid}&c=${cacheBust}`
-        : `?cache=${cacheBust}`)
+        ? `?userfid=${fid}&c=${cache}`
+        : `?c=${cache}`)
   )}`;
 
   //const checkStatusUrl = `${appURL()}?userfid=${fidEncoded}&c=${cacheBust}`;
@@ -174,7 +174,7 @@ const frameHandler = frames(async (ctx) => {
     image: fid && !error ? <ScoreScreen /> : <SplashScreen />,
     buttons: buttons,
     title: "Farcaster Frame",
-    description: "Use this frame to check yours",
+    description: "Use this frame to check yours Hunt Stats",
   };
 });
 
