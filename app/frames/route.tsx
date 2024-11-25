@@ -129,8 +129,8 @@ const frameHandler = frames(async (ctx) => {
   };
   const shareText = encodeURIComponent(
     userData
-      ? `Check yours HUNT STATS`
-      : `Check yours HUNT STATS`
+      ? `Check yours HUNT STATS here 👇 If you like this frame, share and follow @tieubochet.eth`
+      : `Check yours HUNT STATS here 👇 If you like this frame, share and follow @tieubochet.eth`
   );
 
   // Change the url here
@@ -173,7 +173,7 @@ const frameHandler = frames(async (ctx) => {
   return {
     image: fid && !error ? <ScoreScreen /> : <SplashScreen />,
     buttons: buttons,
-    title: "Farcaster Frame",
+    title: "Check Hunt Stats Frame",
     description: "Use this frame to check yours Hunt Stats",
   };
 });
