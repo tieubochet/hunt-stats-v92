@@ -80,7 +80,7 @@ const frameHandler = frames(async (ctx) => {
     console.log("Using FID from state:", fid);
   }
 
-  //console.log("Final FID used:", fid);
+  console.log("Final FID used:", fid);
 
   const shouldFetchData =
     fid && (!userData || (userData as UserData).fid !== fid);
@@ -165,7 +165,7 @@ const frameHandler = frames(async (ctx) => {
         Check yours HUNT STATS
       </Button>,
       <Button action="link" target={shareUrl}>
-        Share
+        Cast it
       </Button>,
     );
   }
