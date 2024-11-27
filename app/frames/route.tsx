@@ -89,9 +89,7 @@ const frameHandler = frames(async (ctx) => {
     await Promise.all([fetchUserData(fid)]);
   }
 
-  const huntstats = `https://tip.hunt.town/api/stats/fid/${
-    fid ? `${fid}` : ""
-  }`;
+  const huntstats = `https://tip.hunt.town/api/stats/fid/${fid ? `${fid}` : ""}`;
 
   let huntstatsJSON: any = {};
   try {
@@ -165,7 +163,7 @@ const frameHandler = frames(async (ctx) => {
         Check yours HUNT STATS
       </Button>,
       <Button action="link" target={shareUrl}>
-        Cast it
+        Share
       </Button>,
     );
   }
@@ -173,7 +171,7 @@ const frameHandler = frames(async (ctx) => {
   return {
     image: fid && !error ? <ScoreScreen /> : <SplashScreen />,
     buttons: buttons,
-    title: "Check Hunt Stats Frame",
+    title: "Hunt Stats Frame",
     description: "Use this frame to check yours Hunt Stats",
   };
 });
