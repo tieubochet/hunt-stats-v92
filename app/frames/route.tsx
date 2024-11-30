@@ -105,7 +105,7 @@ const frameHandler = frames(async (ctx) => {
 
   const SplashScreen = () => (
     <div tw="flex flex-col flex-nowrap justify-center items-center w-full h-full bg-[#fff] text-[#FF6A72] text-[60px]">
-      Check yours HUNT STATS
+      CHECK YOUR HUNT STATS
     </div>
   );
 
@@ -127,8 +127,8 @@ const frameHandler = frames(async (ctx) => {
   };
   const shareText = encodeURIComponent(
     userData
-      ? `Check yours HUNT STATS here 👇 If you like this frame, share and follow @tieubochet.eth`
-      : `Check yours HUNT STATS here 👇 If you like this frame, share and follow @tieubochet.eth`
+      ? `Check your HUNT STATS here 👇 If you like this frame, share and follow @tieubochet.eth`
+      : `Check your HUNT STATS here 👇 If you like this frame, share and follow @tieubochet.eth`
   );
 
   // Change the url here
@@ -154,13 +154,13 @@ const frameHandler = frames(async (ctx) => {
   if (!userData) {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
-        Check yours HUNT STATS
+        Check your HUNT STATS
       </Button>
     );
   } else {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
-        Check yours HUNT STATS
+        Check your HUNT STATS
       </Button>,
       <Button action="link" target={shareUrl}>
         Cast it
