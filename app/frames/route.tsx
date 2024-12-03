@@ -108,16 +108,16 @@ const frameHandler = frames(async (ctx) => {
 
   const ScoreScreen = () => {
     return (
-      <div tw="flex flex-col flex-nowrap justify-center items-center w-full h-full bg-[#333333] text-[40px] text-[#fff]">
+      <div tw="flex flex-col w-full h-screen">
           <img
               src="https://i.imgur.com/G3M412U.png"
               tw="h-screen w-full"
           />
-          <div tw="flex"><img
-              src={userData?.profileImageUrl}
-              alt="Profile"
-              tw="w-32 h-32 rounded-md mb-2 border border-[#fff]"
-            /></div>
+          <img
+            src={userData?.profileImageUrl}
+            alt="Profile"
+            tw="w-25 h-25 rounded-3 absolute top-100 left-60"
+          />
           <div tw="flex text-[#fff]">@{huntstatsJSON.username}</div>
           <div tw="flex mb-3 mt-5">Daily Allowance: <span tw="flex text-[#ffdc00] ml-5 mr-5">{formatNumber(huntstatsJSON.tip_allowance)}</span></div>
           <div tw="flex mb-3">Daily Remaining: <span tw="flex text-[#ffdc00] ml-5 mr-5">{formatNumber(huntstatsJSON.remaining_allowance)}</span></div>
