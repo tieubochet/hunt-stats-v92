@@ -148,8 +148,8 @@ const frameHandler = frames(async (ctx) => {
   const shareUrl = `https://warpcast.com/~/compose?text=${shareText}&embeds[]=${encodeURIComponent(
     appURL() +
       (fid
-        ? `?userfid=${fid}&cache=${cache}`
-        : `?cache=${cache}`)
+        ? `?userfid=${fid}&c=${cache}`
+        : `?c=${cache}`)
   )}`;
 
   //const checkStatusUrl = `${appURL()}?userfid=${fidEncoded}&c=${cacheBust}`;
@@ -168,7 +168,7 @@ const frameHandler = frames(async (ctx) => {
         Check your HUNT STATS
       </Button>,
       <Button action="link" target={shareUrl}>
-        Cast it
+        Share
       </Button>,
     );
   }
