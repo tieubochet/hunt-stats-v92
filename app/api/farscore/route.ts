@@ -17,6 +17,7 @@ query GetUserSocialCapital($userId: String!) {
     Social {
       userId
       profileImage
+      profileName
     }
   }
 }

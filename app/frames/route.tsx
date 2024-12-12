@@ -10,6 +10,7 @@ const frameHandler = frames(async (ctx) => {
   interface UserData {
     fid: string;
     profileImageUrl: string;
+    username: string;
   }
 
   let userData: UserData | null = null;
@@ -36,6 +37,7 @@ const frameHandler = frames(async (ctx) => {
         const social = airstackData.userData.Socials.Social[0];
         userData = {
           fid: social.userId || "N/A",
+          username: social.profileName || "unknown",
           profileImageUrl: social.profileImage || "N/A",
         };
       } else {
@@ -126,7 +128,7 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex text-[44px] justify-end absolute top-133 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tip_allowance)}</div>
           <div tw="flex text-[44px] justify-end absolute top-155 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.remaining_allowance)}</div>
           <div tw="flex text-[44px] justify-end absolute top-177 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.received)}</div>
-          <div tw="flex mb-15 absolute bottom-5 left-5">@tieubochet</div>
+          <div tw="flex mb-0 absolute bottom-5 left-5">@tieubochet</div>
       </div>
     );
   };
@@ -176,6 +178,9 @@ const frameHandler = frames(async (ctx) => {
   return {
     image: fid && !error ? <ScoreScreen /> : <SplashScreen />,
     buttons: buttons,
+    imageOptions: {
+      aspectRatio:"1:1",
+    },
     title: "Hunt Stats Frame",
     description: "Use this frame to check yours Hunt Stats",
   };
