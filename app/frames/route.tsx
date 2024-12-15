@@ -158,7 +158,7 @@ const frameHandler = frames(async (ctx) => {
         Check your HUNT STATS
       </Button>,
       <Button action="link" target={shareUrl}>
-        Share
+        Cast it
       </Button>,
     );
   }
