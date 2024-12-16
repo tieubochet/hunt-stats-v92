@@ -103,7 +103,7 @@ const frameHandler = frames(async (ctx) => {
   }
 
   const SplashScreen = () => (
-    <div tw="flex flex-col flex-nowrap justify-center items-center w-full h-full bg-[#fff] text-[#FF6A72] text-[60px]">
+    <div tw="flex flex-col flex-nowrap justify-center items-center w-full h-full bg-[#000000] text-[#ffffff] text-[60px]">
       CHECK YOUR HUNT STATS
     </div>
   );
