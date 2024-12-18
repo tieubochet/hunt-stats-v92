@@ -184,7 +184,7 @@ const frameHandler = frames(async (ctx) => {
     imageOptions: {
       aspectRatio:"1:1",
     },
-    title: "Hunt Stats Frame",
+    title: "Farcaster Frame V1",
     description: "Use this frame to check yours Hunt Stats",
   };
 });
