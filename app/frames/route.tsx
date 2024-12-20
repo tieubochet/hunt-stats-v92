@@ -88,6 +88,22 @@ const frameHandler = frames(async (ctx) => {
     await Promise.all([fetchUserData(fid)]);
   }
 
+  const getCurrentUTCTime = (): string => {
+    const now = new Date();
+
+    const year = now.getUTCFullYear();
+    const month = String(now.getUTCMonth() + 1).padStart(2, "0"); 
+    const day = String(now.getUTCDate()).padStart(2, "0");
+    const hours = String(now.getUTCHours()).padStart(2, "0");
+    const minutes = String(now.getUTCMinutes()).padStart(2, "0");
+    const seconds = String(now.getUTCSeconds()).padStart(2, "0");
+
+    return `${day}-${month}-${year}, ${hours}:${minutes}:${seconds} UTC`;
+  };
+
+  const dateNow = getCurrentUTCTime();
+
+
   const huntstats = `https://tip.hunt.town/api/stats/fid/${fid ? `${fid}` : ""}`;
 
   let huntstatsJSON: any = {};
@@ -115,7 +131,7 @@ const frameHandler = frames(async (ctx) => {
     return (
       <div tw="flex flex-col w-full h-screen">
           <img
-              src="https://i.imgur.com/G3M412U.png"
+              src="https://i.imgur.com/kwa0jGF.png"
               tw="h-screen w-full"
           />
           <img
@@ -123,6 +139,7 @@ const frameHandler = frames(async (ctx) => {
             alt="Profile"
             tw="w-25 h-25 rounded-3 absolute top-100 left-60"
           />
+          <div tw="flex mb-0 absolute top-4 right-5">{dateNow}</div>
           <div tw="flex text-[35px] absolute top-102 left-95 text-black">{userData?.username}</div>
           <div tw="flex text-[26px] absolute top-115 left-95 text-black">FID: {userData?.fid}</div>
           <div tw="flex text-[44px] justify-end absolute top-133 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tip_allowance)}</div>
