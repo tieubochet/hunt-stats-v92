@@ -174,6 +174,13 @@ const frameHandler = frames(async (ctx) => {
       <Button action="link" target={shareUrl}>
         Share
       </Button>,
+      <Button
+      action="link"
+        // Change the url here
+        target="https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fcheck-hunt-stats-v93.vercel.app%2Fapi%2Fcast-action"
+      >
+        Cast Action
+      </Button>,
     );
   } else {
     buttons.push(
