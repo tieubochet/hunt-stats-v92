@@ -56,8 +56,6 @@ const frameHandler = frames(async (ctx) => {
     try {
       const parsedUrl = new URL(url);
       let fid = parsedUrl.searchParams.get("userfid");
-
-      //console.log("Extracted FID from URL:", fid);
       return fid;
     } catch (e) {
       console.error("Error parsing URL:", e);
@@ -69,7 +67,6 @@ const frameHandler = frames(async (ctx) => {
 
   if (ctx.message?.requesterFid) {
     fid = ctx.message.requesterFid.toString();
-    //console.log("Using requester FID:", fid);
   } else if (ctx.url) {
     fid = extractFid(ctx.url.toString());
     console.log("Extracted FID from URL:", fid);
@@ -148,7 +145,11 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex text-[44px] justify-end absolute top-133 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tip_allowance)}</div>
           <div tw="flex text-[44px] justify-end absolute top-155 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.remaining_allowance)}</div>
           <div tw="flex text-[44px] justify-end absolute top-177 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.received)}</div>
+<<<<<<< HEAD
           <div tw="flex mb-0 absolute bottom-5 left-5">Frame Created by @tieubochet.eth</div>
+=======
+          <div tw="flex mb-0 absolute bottom-5 left-5">Designed by @tieubochet.eth</div>
+>>>>>>> 9d6199d89ada629e4b9079085c6c7ce90525edaf
       </div>
     );
   };
@@ -158,14 +159,7 @@ const frameHandler = frames(async (ctx) => {
       : `Check your HUNT STATS here 👇 If you like this frame, share and follow @tieubochet.eth`
   );
 
-  // Change the url here
-  /*
-  const shareUrl = `https://warpcast.com/~/compose?text=${shareText}&embeds[]=https://check-hunt-stats-v1.vercel.app/frames${
-    fid ? `?userfid=${fid}&c=${cacheBust}` : `?userfid=${fid}&c=${cacheBust}`
-  }`; 
-  */
   const cache = new Date().getTime();
-  //const fidEncoded = fid ? encodeURIComponent(fid) : "";
 
   const shareUrl = `https://warpcast.com/~/compose?text=${shareText}&embeds[]=${encodeURIComponent(
     appURL() +
@@ -173,8 +167,6 @@ const frameHandler = frames(async (ctx) => {
         ? `?userfid=${fid}&c=${cache}`
         : `?c=${cache}`)
   )}`;
-
-  //const checkStatusUrl = `${appURL()}?userfid=${fidEncoded}&c=${cacheBust}`;
 
   const buttons = [];
 
@@ -200,7 +192,7 @@ const frameHandler = frames(async (ctx) => {
         Check your HUNT STATS
       </Button>,
       <Button action="link" target={shareUrl}>
-        Share
+        Cast it
       </Button>,
       <Button
       action="link"
