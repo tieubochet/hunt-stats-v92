@@ -145,7 +145,11 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex text-[44px] justify-end absolute top-133 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tip_allowance)}</div>
           <div tw="flex text-[44px] justify-end absolute top-155 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.remaining_allowance)}</div>
           <div tw="flex text-[44px] justify-end absolute top-177 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.received)}</div>
+<<<<<<< HEAD
+          <div tw="flex mb-0 absolute bottom-5 left-5">Frame Created by @tieubochet.eth</div>
+=======
           <div tw="flex mb-0 absolute bottom-5 left-5">Designed by @tieubochet.eth</div>
+>>>>>>> 9d6199d89ada629e4b9079085c6c7ce90525edaf
       </div>
     );
   };
