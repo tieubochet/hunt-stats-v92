@@ -142,14 +142,10 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex mb-0 absolute top-4 right-5">{dateNow}</div>
           <div tw="flex text-[35px] absolute top-102 left-95 text-black">{userData?.username}</div>
           <div tw="flex text-[26px] absolute top-115 left-95 text-black">FID: {userData?.fid}</div>
-          <div tw="flex text-[44px] justify-end absolute top-133 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tip_allowance)}</div>
-          <div tw="flex text-[44px] justify-end absolute top-155 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.remaining_allowance)}</div>
-          <div tw="flex text-[44px] justify-end absolute top-177 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.received)}</div>
-<<<<<<< HEAD
+          <div tw="flex text-[44px] justify-end absolute top-133 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tip_allowance)} 👏</div>
+          <div tw="flex text-[44px] justify-end absolute top-155 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.remaining_allowance)} 👏</div>
+          <div tw="flex text-[44px] justify-end absolute top-177 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.received)} 👏</div>
           <div tw="flex mb-0 absolute bottom-5 left-5">Frame Created by @tieubochet.eth</div>
-=======
-          <div tw="flex mb-0 absolute bottom-5 left-5">Designed by @tieubochet.eth</div>
->>>>>>> 9d6199d89ada629e4b9079085c6c7ce90525edaf
       </div>
     );
   };
@@ -173,7 +169,7 @@ const frameHandler = frames(async (ctx) => {
   if (!userData) {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
-        Check your HUNT STATS
+        Check yours
       </Button>,
       <Button action="link" target={shareUrl}>
         Share
@@ -189,13 +185,12 @@ const frameHandler = frames(async (ctx) => {
   } else {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
-        Check your HUNT STATS
+        Check yours
       </Button>,
       <Button action="link" target={shareUrl}>
         Cast it
       </Button>,
-      <Button
-      action="link"
+      <Button action="link"
         // Change the url here
         target="https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fcheck-hunt-stats-v93.vercel.app%2Fapi%2Fcast-action"
       >
