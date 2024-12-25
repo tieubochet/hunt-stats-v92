@@ -145,14 +145,14 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex text-[44px] justify-end absolute top-133 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tip_allowance)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-155 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.remaining_allowance)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-177 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.received)} 👏</div>
-          <div tw="flex mb-0 absolute bottom-5 left-5">Frame Created by @tieubochet.eth</div>
+          <div tw="flex mb-0 absolute bottom-5 left-5 text-[26px] text-[#000000]">Frame Created by @tieubochet.eth</div>
       </div>
     );
   };
   const shareText = encodeURIComponent(
     userData
-      ? `Check your HUNT STATS here 👇 If you like this frame, share and follow @tieubochet.eth`
-      : `Check your HUNT STATS here 👇 If you like this frame, share and follow @tieubochet.eth`
+      ? `Check your HUNT STATS here 👇 If you like this frame, share and follow @tieubochet.eth 🤤`
+      : `Check your HUNT STATS here 👇 If you like this frame, share and follow @tieubochet.eth 🤤`
   );
 
   const cache = new Date().getTime();
@@ -172,7 +172,7 @@ const frameHandler = frames(async (ctx) => {
         Check yours
       </Button>,
       <Button action="link" target={shareUrl}>
-        Share
+        Cast it
       </Button>,
       <Button
       action="link"
