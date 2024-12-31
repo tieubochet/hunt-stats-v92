@@ -131,7 +131,7 @@ const frameHandler = frames(async (ctx) => {
     return (
       <div tw="flex flex-col w-full h-screen">
           <img
-              src="https://i.imgur.com/kwa0jGF.png"
+              src="https://i.imgur.com/oRMT6zN.png"
               tw="h-screen w-full"
           />
           <img
@@ -145,6 +145,7 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex text-[44px] justify-end absolute top-133 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tip_allowance)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-155 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.remaining_allowance)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-177 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.received)} 👏</div>
+          <div tw="flex text-[44px] justify-end absolute top-197 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.miniBuildingCount)} 👏</div>
           <div tw="flex mb-0 absolute bottom-5 left-5 text-[26px] text-[#000000]">Frame Created by @tieubochet.eth</div>
         <div class="hidden" tw="flex mb-0 absolute top-4 right-5">{dateNow}</div>
 
