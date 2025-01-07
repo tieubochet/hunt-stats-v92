@@ -135,7 +135,7 @@ const frameHandler = frames(async (ctx) => {
               tw="h-screen w-full"
           />
           <img
-            src={userData?.profileImageUrl}
+            src={huntstatsJSON.pfp_url}
             alt="Profile"
             tw="w-25 h-25 rounded-3 absolute top-85 left-60"
           />
@@ -146,8 +146,8 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex text-[32px] justify-end absolute top-88 right-55 text-black">Score: {formatNumber(huntstatsJSON.farscore)}</div>
           <div tw="flex text-[44px] justify-end absolute top-118 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tip_allowance)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-141 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.remaining_allowance)} 👏</div>
-          <div tw="flex text-[44px] justify-end absolute top-163 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tipped)} 👏</div>
-          <div tw="flex text-[44px] justify-end absolute top-183 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.miniBuildingCount)} 👏</div>
+          <div tw="flex text-[44px] justify-end absolute top-163 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.miniBuildingCount * 100)} 👏</div>
+          <div tw="flex text-[44px] justify-end absolute top-183 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tipped)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-205 right-66 text-[#f00707]">{formatNumber(huntstatsJSON.received)} 👏</div>
           <div tw="flex mb-0 absolute bottom-5 left-5 text-[26px] text-[#000000]">Frame Created by @tieubochet.eth</div>
       </div>
