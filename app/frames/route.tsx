@@ -145,6 +145,7 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex text-[26px] absolute top-100 left-95 text-black">FID: {userData?.fid}</div>
           <div tw="flex text-[32px] justify-end absolute top-88 right-55 text-black">Score: {formatNumber(huntstatsJSON.farscore)}</div>
           <div tw="flex text-[32px] w-25 justify-end absolute top-122 right-137 text-[#FF0F15]">{huntstatsJSON.miniBuildingCount }</div>
+          <div tw="flex text-[32px] w-25 justify-end absolute top-122 left-42 text-[#FF0F15]">{huntstatsJSON.buildings.length }</div>
           <div tw="flex text-[44px] justify-end absolute top-142 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tip_allowance)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-163 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.remaining_allowance)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-185 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tipped)} 👏</div>
