@@ -98,7 +98,7 @@ const frameHandler = frames(async (ctx) => {
     const minutes = String(now.getUTCMinutes()).padStart(2, "0");
     const seconds = String(now.getUTCSeconds()).padStart(2, "0");
 
-    return `${day}-${month}-${year}, ${hours}:${minutes}:${seconds} UTC`;
+    return `${year}-${month}-${day}, ${hours}:${minutes}:${seconds} UTC`;
   };
 
   const dateNow = getCurrentUTCTime();
@@ -198,13 +198,13 @@ const frameHandler = frames(async (ctx) => {
         Tip here
       </Button>,
       <Button action="link" target={shareUrl}>
-        Cast it
+        Share
       </Button>,
       <Button action="link"
         // Change the url here
         target="https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fcheck-hunt-stats-v93.vercel.app%2Fapi%2Fcast-action"
       >
-        Cast Action
+        Add Action
       </Button>,
     );
   }
