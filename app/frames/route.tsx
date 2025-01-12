@@ -176,15 +176,18 @@ const frameHandler = frames(async (ctx) => {
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
         Check yours
       </Button>,
+      <Button action="link" target="https://warpcast.com/tieubochet.eth">
+      Tip here
+    </Button>,
       <Button action="link" target={shareUrl}>
-        Cast it
+        Share
       </Button>,
       <Button
       action="link"
         // Change the url here
         target="https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fcheck-hunt-stats-v93.vercel.app%2Fapi%2Fcast-action"
       >
-        Cast Action
+        Add Action
       </Button>,
     );
   } else {
