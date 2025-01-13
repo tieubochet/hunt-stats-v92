@@ -158,8 +158,8 @@ const frameHandler = frames(async (ctx) => {
   };
   const shareText = encodeURIComponent(
     userData
-      ? `Check your HUNT STATS here 👇 If you like this frame, share and follow @tieubochet.eth 🤤`
-      : `Check your HUNT STATS here 👇 If you like this frame, share and follow @tieubochet.eth 🤤`
+      ? `Check your HUNT STATS here 👇 If you like this frame, please share and follow @tieubochet.eth 🤤`
+      : `Check your HUNT STATS here 👇 If you like this frame, please share and follow @tieubochet.eth 🤤`
   );
 
   const cache = new Date().getTime();
@@ -218,8 +218,8 @@ const frameHandler = frames(async (ctx) => {
     imageOptions: {
       aspectRatio:"1:1",
     },
-    title: "Farcaster Frame V1",
-    description: "Use this frame to check yours Hunt Stats",
+    title: "Farcaster Frame",
+    description: "Use this frame to check your Hunt Stats",
   };
 });
 
