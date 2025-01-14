@@ -103,6 +103,32 @@ const frameHandler = frames(async (ctx) => {
 
   const dateNow = getCurrentUTCTime();
 
+  const getTimeUntilMidnightUTC = () => {
+    const now = new Date();
+    const nowTime = now.getTime(); // milliseconds
+  
+    // Lấy ngày hiện tại và set giờ phút giây về 0 (bắt đầu ngày mới)
+    const midnight = new Date(now);
+    midnight.setUTCHours(0, 0, 0, 0);
+  
+    // Thêm 1 ngày để tính 00:00 UTC ngày hôm sau
+    midnight.setUTCDate(midnight.getUTCDate() + 1);
+  
+    const midnightTime = midnight.getTime(); // milliseconds
+  
+    const timeLeft = midnightTime - nowTime; // milliseconds còn lại
+  
+    const seconds = Math.floor(timeLeft / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+  
+    const remainingMinutes = minutes % 60;
+    const remainingHours = hours % 24;
+  
+    return `${remainingHours} hours ${remainingMinutes} minutes`;
+  };
+  
+  const timeLeft = getTimeUntilMidnightUTC();
 
   const huntstats = `https://tip.hunt.town/api/stats/fid/${fid ? `${fid}` : ""}`;
 
@@ -151,6 +177,7 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex text-[44px] justify-end absolute top-185 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tipped)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-205 right-66 text-[#f00707]">{formatNumber(huntstatsJSON.received)} 👏</div>
           <div tw="flex mb-0 absolute bottom-5 left-5 text-[26px] text-[#000000]">Frame Created by @tieubochet.eth</div>
+          <div tw="flex mb-0 absolute bottom-5 right-5 text-[26px] text-[#000000]">Reset time: {timeLeft}</div>
       </div>
     );
   };
