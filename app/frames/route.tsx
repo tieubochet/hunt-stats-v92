@@ -103,6 +103,32 @@ const frameHandler = frames(async (ctx) => {
 
   const dateNow = getCurrentUTCTime();
 
+  const getTimeUntilMidnightUTC = () => {
+    const now = new Date();
+    const nowTime = now.getTime(); // milliseconds
+  
+    // Lấy ngày hiện tại và set giờ phút giây về 0 (bắt đầu ngày mới)
+    const midnight = new Date(now);
+    midnight.setUTCHours(0, 0, 0, 0);
+  
+    // Thêm 1 ngày để tính 00:00 UTC ngày hôm sau
+    midnight.setUTCDate(midnight.getUTCDate() + 1);
+  
+    const midnightTime = midnight.getTime(); // milliseconds
+  
+    const timeLeft = midnightTime - nowTime; // milliseconds còn lại
+  
+    const seconds = Math.floor(timeLeft / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+  
+    const remainingMinutes = minutes % 60;
+    const remainingHours = hours % 24;
+  
+    return `${remainingHours} hours ${remainingMinutes} minutes`;
+  };
+  
+  const timeLeft = getTimeUntilMidnightUTC();
 
   const huntstats = `https://tip.hunt.town/api/stats/fid/${fid ? `${fid}` : ""}`;
 
@@ -143,6 +169,7 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex mb-0 absolute top-4 left-63">#Season 7</div>
           <div tw="flex text-[35px] absolute top-87 left-95 text-black">{userData?.username}</div>
           <div tw="flex text-[26px] absolute top-100 left-95 text-black">FID: {userData?.fid}</div>
+          <div tw="flex mb-0 absolute bottom-5 right-5 text-[26px] text-[#000000]">Reset time: {timeLeft}</div>
           <div tw="flex text-[32px] justify-end absolute top-88 right-55 text-black">Score: {formatNumber(huntstatsJSON.farscore)}</div>
           <div tw="flex text-[32px] w-25 justify-end absolute top-122 right-137 text-[#FF0F15]">{huntstatsJSON.miniBuildingCount }</div>
           <div tw="flex text-[32px] w-25 justify-end absolute top-122 left-42 text-[#FF0F15]">{huntstatsJSON.buildings.length }</div>
