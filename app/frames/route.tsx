@@ -165,7 +165,6 @@ const frameHandler = frames(async (ctx) => {
             alt="Profile"
             tw="w-25 h-25 rounded-3 absolute top-85 left-60"
           />
-          <div tw="flex mb-0 absolute top-4 right-5">{dateNow}</div>
           <div tw="flex mb-0 absolute top-4 left-63">#Season 7</div>
           <div tw="flex text-[35px] absolute top-87 left-95 text-black">{userData?.username}</div>
           <div tw="flex text-[26px] absolute top-100 left-95 text-black">FID: {userData?.fid}</div>
@@ -177,7 +176,9 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex text-[44px] justify-end absolute top-163 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.remaining_allowance)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-185 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tipped)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-205 right-66 text-[#f00707]">{formatNumber(huntstatsJSON.received)} 👏</div>
+
           <div tw="flex mb-0 absolute bottom-5 left-5 text-[26px] text-[#000000]">@tieubochet.eth</div>
+          <div tw="flex mb-0 absolute top-4 right-5">{dateNow}</div>
 
       </div>
     );
