@@ -177,8 +177,10 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex text-[44px] justify-end absolute top-185 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tipped)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-205 right-66 text-[#f00707]">{formatNumber(huntstatsJSON.received)} 👏</div>
 
-          <div tw="flex mb-0 absolute bottom-5 left-5 text-[26px] text-[#000000]">@tieubochet.eth</div>
-          <div tw="flex mb-0 absolute top-4 right-5">{dateNow}</div>
+
+          <div tw="flex mb-0 absolute bottom-5 left-5 text-[26px] text-[#000000]">Frame Created by @tieubochet.eth</div>
+        <div tw="flex mb-0 absolute top-4 right-5">{dateNow}</div>
+
 
       </div>
     );
