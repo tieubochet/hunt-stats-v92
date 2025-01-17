@@ -132,11 +132,12 @@ const frameHandler = frames(async (ctx) => {
     const seconds = Math.floor(timeLeft / 1000);
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
-  
+    
+    const remainingSeconds = seconds % 60;
     const remainingMinutes = minutes % 60;
     const remainingHours = hours % 24;
   
-    return `${remainingHours} hours ${remainingMinutes} minutes`;
+    return `${remainingHours} hours ${remainingMinutes} minutes ${remainingSeconds} seconds`;
   };
   
   const timeLeft = getTimeUntilMidnightUTC();
