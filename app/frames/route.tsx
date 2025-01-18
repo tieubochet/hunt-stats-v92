@@ -193,7 +193,7 @@ const frameHandler = frames(async (ctx) => {
       </div>
     );
   };
-  const shareText = `Check your HUNT STATS here 👇 If you like this frame, please share and follow @tieubochet.eth 🤤`;
+  const shareText = `👏 Check your HUNT STATS here 👇 If you like this frame, please share and follow @tieubochet.eth 🤤`;
 
   const cache = new Date().getTime();
 
