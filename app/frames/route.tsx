@@ -200,8 +200,8 @@ const frameHandler = frames(async (ctx) => {
   const shareUrl = `https://warpcast.com/~/compose?text=${shareText}&embeds[]=${encodeURIComponent(
     appURL() +
       (fid
-        ? `?userfid=${fid}&cache=${cache}`
-        : `?cache=${cache}`)
+        ? `?userfid=${fid}&c=${cache}`
+        : `?c=${cache}`)
   )}`;
 
   const buttons = [];
