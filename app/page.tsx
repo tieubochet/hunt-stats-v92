@@ -23,10 +23,10 @@ export async function generateMetadata({
 
   return {
     title: "Check Hunt stats",
-    description: "use this frame to check hunt stats.",
+    description: "Use this frame to check your hunt stats.",
     openGraph: {
       title: "Check Hunt stats",
-      description: "use this frame to check hunt stats.",
+      description: "Use this frame to check your hunt stats.",
       images: [`${framesUrl.origin}/api/og`],
     },
     other: {
@@ -37,5 +37,5 @@ export async function generateMetadata({
 }
 
 export default function Page() {
-  return <span>Loading...</span>;
+  return <span>Loading, wait a minutes...</span>;
 }
