@@ -10,13 +10,13 @@ export const GET = async (req: NextRequest) => {
       type: "post",
     },
     icon: "pulse",
-    name: "Hunt Stats",
+    name: "Hunt Stats Frame V1",
     aboutUrl: `${appURL()}`,
     description: "Check your HUNT STATS by @tieubochet.eth",
   });
 };
 
 export const POST = frames(async (ctx) => {
-  console.log("Cast Action FID: " + ctx.message?.castId?.fid);
+  //console.log("Cast Action FID: " + ctx.message?.castId?.fid);
   return castActionFrame(`${appURL()}?userfid=${ctx.message?.castId?.fid}`);
 });
