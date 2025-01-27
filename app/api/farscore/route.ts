@@ -43,7 +43,7 @@ export async function GET(req: NextRequest) {
     const [userData] = await Promise.all([fetchQuery(userQuery, { userId })]);
 
     if (userData.error) {
-      console.error("Airstack API error (user data):", userData.error);
+      //console.error("Airstack API error (user data):", userData.error);
       return NextResponse.json(
         { error: userData.error.message },
         { status: 500 }
@@ -59,7 +59,7 @@ export async function GET(req: NextRequest) {
       userData: userData.data,
     });
   } catch (error) {
-    console.error("Unexpected error:", error);
+    //console.error("Unexpected error:", error);
     return NextResponse.json(
       { error: "An unexpected error occurred" },
       { status: 500 }
