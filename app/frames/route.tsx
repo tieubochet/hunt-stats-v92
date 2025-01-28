@@ -44,7 +44,7 @@ const frameHandler = frames(async (ctx) => {
         throw new Error("No user data found");
       }
     } catch (err) {
-      console.error("Error fetching data:", err);
+      //console.error("Error fetching data:", err);
       error = (err as Error).message;
     } finally {
       isLoading = false;
@@ -58,7 +58,7 @@ const frameHandler = frames(async (ctx) => {
       let fid = parsedUrl.searchParams.get("userfid");
       return fid;
     } catch (e) {
-      console.error("Error parsing URL:", e);
+      //console.error("Error parsing URL:", e);
       return null;
     }
   };
