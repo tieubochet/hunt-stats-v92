@@ -69,17 +69,17 @@ const frameHandler = frames(async (ctx) => {
     fid = ctx.message.requesterFid.toString();
   } else if (ctx.url) {
     fid = extractFid(ctx.url.toString());
-    console.log("Extracted FID from URL:", fid);
+    //console.log("Extracted FID from URL:", fid);
   } else {
     console.log("No ctx.url available");
   }
 
   if (!fid && (ctx.state as State)?.lastFid) {
     fid = (ctx.state as State).lastFid ?? null;
-    console.log("Using FID from state:", fid);
+    //console.log("Using FID from state:", fid);
   }
 
-  console.log("Final FID used:", fid);
+  //console.log("Final FID used:", fid);
 
   const shouldFetchData =
     fid && (!userData || (userData as UserData).fid !== fid);
@@ -118,11 +118,9 @@ const frameHandler = frames(async (ctx) => {
     const now = new Date();
     const nowTime = now.getTime(); // milliseconds
 
-    // Lấy ngày hiện tại và set giờ phút giây về 0 (bắt đầu ngày mới)
     const midnight = new Date(now);
     midnight.setUTCHours(0, 0, 0, 0);
 
-    // Thêm 1 ngày để tính 00:00 UTC ngày hôm sau
     midnight.setUTCDate(midnight.getUTCDate() + 1);
 
     const midnightTime = midnight.getTime(); // milliseconds
