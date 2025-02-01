@@ -116,16 +116,16 @@ const frameHandler = frames(async (ctx) => {
 
   const getTimeUntilMidnightUTC = () => {
     const now = new Date();
-    const nowTime = now.getTime(); // milliseconds
+    const nowTime = now.getTime(); 
 
     const midnight = new Date(now);
     midnight.setUTCHours(0, 0, 0, 0);
 
     midnight.setUTCDate(midnight.getUTCDate() + 1);
 
-    const midnightTime = midnight.getTime(); // milliseconds
+    const midnightTime = midnight.getTime(); 
 
-    const timeLeft = midnightTime - nowTime; // milliseconds còn lại
+    const timeLeft = midnightTime - nowTime; 
 
     const seconds = Math.floor(timeLeft / 1000);
     const minutes = Math.floor(seconds / 60);
@@ -217,7 +217,6 @@ const frameHandler = frames(async (ctx) => {
       </Button>,
       <Button
       action="link"
-        // Change the url here
         target="https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fcheck-hunt-stats-v93.vercel.app%2Fapi%2Fcast-action"
       >
         Add Action
@@ -235,7 +234,6 @@ const frameHandler = frames(async (ctx) => {
         Share
       </Button>,
       <Button action="link"
-        // Change the url here
         target="https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fcheck-hunt-stats-v93.vercel.app%2Fapi%2Fcast-action"
       >
         Add Action
