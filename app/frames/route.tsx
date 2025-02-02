@@ -148,7 +148,7 @@ const frameHandler = frames(async (ctx) => {
     if (huntstatsdata.ok) {
       huntstatsJSON = await huntstatsdata.json();
     } else {
-      console.error('Error:', huntstatsdata.status);
+      //console.error('Error:', huntstatsdata.status);
     }
   } catch (error) {
     console.error('Fetch data error:', error);
