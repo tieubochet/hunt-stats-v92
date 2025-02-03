@@ -247,8 +247,8 @@ const frameHandler = frames(async (ctx) => {
     imageOptions: {
       aspectRatio:"1:1",
     },
-    title: "Farcaster Frame",
-    description: "Use this frame to check your Hunt Stats",
+    title: "Hunt Stats Frame V1",
+    description: "Check your HUNT STATS by @tieubochet.eth",
   };
 });
 
