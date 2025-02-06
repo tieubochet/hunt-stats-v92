@@ -209,9 +209,6 @@ const frameHandler = frames(async (ctx) => {
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
         Check yours
       </Button>,
-      <Button action="link" target="https://warpcast.com/tieubochet.eth">
-      Tip here
-    </Button>,
       <Button action="link" target={shareUrl}>
         Share
       </Button>,
@@ -226,9 +223,6 @@ const frameHandler = frames(async (ctx) => {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
         Check yours
-      </Button>,
-      <Button action="link" target="https://warpcast.com/tieubochet.eth">
-        Tip here
       </Button>,
       <Button action="link" target={shareUrl}>
         Share
