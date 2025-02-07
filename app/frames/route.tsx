@@ -207,7 +207,7 @@ const frameHandler = frames(async (ctx) => {
   if (!userData) {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
-        Check yours
+        Mine🔎
       </Button>,
       <Button action="link" target={shareUrl}>
         Share
@@ -222,7 +222,7 @@ const frameHandler = frames(async (ctx) => {
   } else {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
-        Check yours
+        Mine🔎
       </Button>,
       <Button action="link" target={shareUrl}>
         Share
