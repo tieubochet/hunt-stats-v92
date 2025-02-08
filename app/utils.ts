@@ -8,7 +8,7 @@ export function currentURL(pathname: string): URL {
 
     return new URL(pathname, `${protocol}://${host}`);
   } catch (error) {
-    console.error(error);
+    //console.error(error);
     return new URL("http://localhost:3000");
   }
 }
