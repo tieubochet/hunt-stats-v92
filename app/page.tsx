@@ -17,7 +17,7 @@ export async function generateMetadata({
     framesUrl.searchParams.set("action", "fetch");
   }
 
-  console.log("Fetching metadata from:", framesUrl.toString());
+  //console.log("Fetching metadata from:", framesUrl.toString());
 
   const castActionUrl = new URL("/api/cast-action", appURL());
 
