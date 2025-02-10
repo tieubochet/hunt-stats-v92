@@ -22,10 +22,10 @@ export async function generateMetadata({
   const castActionUrl = new URL("/api/cast-action", appURL());
 
   return {
-    title: "Check Hunt stats",
+    title: "Hunt Stats Frame v1",
     description: "Check your HUNT STATS by @tieubochet.eth",
     openGraph: {
-      title: "Check Hunt stats",
+      title: "Hunt Stats Frame v1",
       description: "Check your HUNT STATS by @tieubochet.eth",
       images: [`${framesUrl.origin}/api/og`],
     },
