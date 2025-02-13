@@ -7,8 +7,8 @@ const roboto = Rubik_Bubbles({ weight: ["400"], subsets: ["latin"] });
 
 
 export const metadata: Metadata = {
-  title: "Check Hunt Stats",
-  description: "Use this frame to check your hunt stats",
+  title: "Hunt Stats Frame v1",
+  description: "Check your HUNT STATS by @tieubochet.eth",
 };
 
 export default function RootLayout({
