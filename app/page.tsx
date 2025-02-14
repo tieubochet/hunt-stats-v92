@@ -37,5 +37,5 @@ export async function generateMetadata({
 }
 
 export default function Page() {
-  return <span>Loading, wait a minutes...</span>;
+  return <span>Fetch data here: https://warpcast.com/~/developers/embeds</span>;
 }
