@@ -3,7 +3,7 @@ import { Inter, Baloo_2 } from 'next/font/google'
 import { Rubik_Bubbles } from "next/font/google";
 import "./globals.css";
 
-const lato = Rubik_Bubbles({ weight: ["400"], subsets: ["latin"] });
+const latin = Rubik_Bubbles({ weight: ["400"], subsets: ["latin"] });
 
 
 export const metadata: Metadata = {
