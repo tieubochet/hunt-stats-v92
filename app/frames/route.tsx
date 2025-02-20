@@ -71,7 +71,7 @@ const frameHandler = frames(async (ctx) => {
     fid = extractFid(ctx.url.toString());
     //console.log("Extracted FID from URL:", fid);
   } else {
-    console.log("No ctx.url available");
+    //console.log("No ctx.url available");
   }
 
   if (!fid && (ctx.state as State)?.lastFid) {
