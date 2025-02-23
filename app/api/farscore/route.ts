@@ -49,12 +49,6 @@ export async function GET(req: NextRequest) {
         { status: 500 }
       );
     }
-    /*
-    console.log(
-      "Airstack API response (user data):",
-      JSON.stringify(userData.data, null, 2)
-    );
-    */
     return NextResponse.json({
       userData: userData.data,
     });
