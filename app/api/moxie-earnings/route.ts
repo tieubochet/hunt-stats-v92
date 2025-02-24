@@ -115,10 +115,11 @@ export async function GET(req: NextRequest) {
         2
       )
     );
-
+    /*
     console.log(
       `Fetching Lifetime Moxie earnings data from Airstack for entityId: ${entityId}`
     );
+    */
     const [lifetimeData] = await Promise.all([
       fetchQuery(moxieQuery, { entityId, timeframe: "LIFETIME" }),
     ]);
@@ -160,7 +161,7 @@ export async function GET(req: NextRequest) {
         lifetimeEarnings,
     });
   } catch (error) {
-    console.error("Unexpected error:", error);
+    //console.error("Unexpected error:", error);
     return NextResponse.json(
       { error: "An unexpected error occurred" },
       { status: 500 }
