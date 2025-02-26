@@ -125,7 +125,7 @@ export async function GET(req: NextRequest) {
     ]);
 
     if (lifetimeData.error) {
-      console.error("Airstack API error (lifetime Moxie earnings data):", lifetimeData.error);
+      //console.error("Airstack API error (lifetime Moxie earnings data):", lifetimeData.error);
       return NextResponse.json(
         { error: lifetimeData.error.message },
         { status: 500 }
