@@ -176,7 +176,7 @@ const frameHandler = frames(async (ctx) => {
             tw="w-25 h-25 rounded-3 absolute top-85 left-60"
           />
           <div tw="flex mb-0 absolute top-4 right-5">{dateNow}</div>
-          <div tw="flex mb-0 absolute top-4 left-63">#Season 9 ({curr})</div>
+          <div tw="flex mb-0 absolute top-4 left-63">#Season 11 ({curr})</div>
           <div tw="flex text-[35px] absolute top-87 left-95 text-black">{userData?.username}</div>
           <div tw="flex text-[26px] absolute top-100 left-95 text-black">FID: {userData?.fid}</div>
           <div tw="flex mb-0 absolute bottom-5 right-5 text-[26px] text-[#000000]">Reset time: {timeLeft}</div>
