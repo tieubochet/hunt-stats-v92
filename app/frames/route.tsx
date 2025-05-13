@@ -140,11 +140,11 @@ const frameHandler = frames(async (ctx) => {
   
   const timeLeft = getTimeUntilMidnightUTC();
 
-  const huntstats = `https://tip.hunt.town/api/stats/fid/${fid ? `${fid}` : ""}`;
+  const huntapi = `https://tip.hunt.town/api/stats/fid/${fid ? `${fid}` : ""}`;
 
   let huntstatsJSON: any = {};
   try {
-    const huntstatsdata = await fetch(huntstats);
+    const huntstatsdata = await fetch(huntapi);
     if (huntstatsdata.ok) {
       huntstatsJSON = await huntstatsdata.json();
     } else {
