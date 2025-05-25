@@ -208,13 +208,7 @@ const frameHandler = frames(async (ctx) => {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
         Mine🔎
-      </Button>,
-      <Button
-      action="link"
-        target="https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fcheck-hunt-stats-v93.vercel.app%2Fapi%2Fcast-action"
-      >
-        Cast Action
-      </Button>,
+      </Button>
     );
   } else {
     buttons.push(
