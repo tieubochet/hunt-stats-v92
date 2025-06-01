@@ -214,6 +214,9 @@ const frameHandler = frames(async (ctx) => {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
         Mine🔎
+      </Button>      ,
+      <Button action="link" target={shareUrl}>
+        Share
       </Button>
       /*,
       <Button action="link"
