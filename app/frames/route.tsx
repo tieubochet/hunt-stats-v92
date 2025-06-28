@@ -213,7 +213,7 @@ const frameHandler = frames(async (ctx) => {
         Share
       </Button>,
       <Button action="link"
-        target="https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fcheck-hunt-stats-v92.vercel.app%2Fapi%2Fcast-action"
+        target="https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fcheck-hunt-stats-v93.vercel.app%2Fapi%2Fcast-action"
       >
         Cast Action
       </Button>,
@@ -227,7 +227,7 @@ const frameHandler = frames(async (ctx) => {
         Share
       </Button>,
       <Button action="link"
-        target="https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fcheck-hunt-stats-v92.vercel.app%2Fapi%2Fcast-action"
+        target="https://warpcast.com/~/add-cast-action?url=https%3A%2F%2Fcheck-hunt-stats-v93.vercel.app%2Fapi%2Fcast-action"
       >
         Cast Action
       </Button>,
@@ -241,7 +241,7 @@ const frameHandler = frames(async (ctx) => {
     imageOptions: {
       aspectRatio:"1:1",
     },
-    title: "Hunt Stats Frame v1",
+    title: "Hunt Stats frame v1",
     description: "Check your HUNT STATS by @tieubochet.eth",
   };
 });
