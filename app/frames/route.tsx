@@ -209,22 +209,22 @@ const frameHandler = frames(async (ctx) => {
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
         Check🔎
       </Button>,
-      /*
+      
       <Button action="link" target={shareUrl}>
         Share
       </Button>,
-      */
+      
     );
   } else {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
         Check🔎
       </Button>,
-      /*
+      
       <Button action="link" target={shareUrl}>
         Share
       </Button>,
-      */
+      
     );
   }
 
