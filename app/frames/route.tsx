@@ -179,7 +179,7 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex mb-0 absolute top-4 left-63">#Season 13 ({curr})</div>
           <div tw="flex text-[35px] absolute top-87 left-95 text-black">{userData?.username}</div>
           <div tw="flex text-[26px] absolute top-100 left-95 text-black">FID: {userData?.fid}</div>
-          <div tw="flex mb-0 absolute bottom-5 right-5 text-[26px] text-[#000000]">Reset time: {timeLeft}</div>
+          <div tw="flex mb-0 absolute bottom-5 right-5 text-[26px] text-[#333333]">Reset time: {timeLeft}</div>
           <div tw="flex text-[32px] justify-end absolute top-100 right-65 text-black">Score: {formatNumber(huntstatsJSON.farscore)}</div>
           <div tw="flex text-[32px] w-25 justify-end absolute top-122 right-137 text-[#FF0F15]">{huntstatsJSON.miniBuildingCount }</div>
           <div tw="flex text-[32px] w-25 justify-end absolute top-122 left-42 text-[#FF0F15]">{huntstatsJSON.buildings.length }</div>
@@ -187,7 +187,7 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex text-[44px] justify-end absolute top-163 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.remaining_allowance)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-185 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tipped)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-205 right-66 text-[#f00707]">{formatNumber(huntstatsJSON.received)} 👏</div>
-          <div tw="flex mb-0 absolute bottom-5 left-5 text-[26px] text-[#000000]">Frame created by @tieubochet.eth</div>
+          <div tw="flex mb-0 absolute bottom-5 left-5 text-[26px] text-[#333333]">Frame created by @tieubochet.eth</div>
       </div>
     );
   };
