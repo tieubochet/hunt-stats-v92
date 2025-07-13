@@ -187,11 +187,11 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex text-[44px] justify-end absolute top-163 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.remaining_allowance)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-185 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tipped)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-205 right-66 text-[#f00707]">{formatNumber(huntstatsJSON.received)} 👏</div>
-          <div tw="flex mb-0 absolute bottom-5 left-5 text-[26px] text-[#333333]">Frame created by @tieubochet.eth</div>
+          <div tw="flex mb-0 absolute bottom-5 left-5 text-[26px] text-[#333333]">Frame created by @teeboo.eth</div>
       </div>
     );
   };
-  const shareText = `👏 Check your HUNT STATS 👇 If you like my frame, please share and follow @tieubochet.eth`;
+  const shareText = `👏 Check your HUNT STATS 👇 If you like my frame, please share and follow @teeboo.eth`;
 
   const cache = new Date().getTime();
 
@@ -235,7 +235,7 @@ const frameHandler = frames(async (ctx) => {
       aspectRatio:"1:1",
     },
     title: "Hunt Stats frame v1",
-    description: "Check your HUNT STATS by @tieubochet.eth",
+    description: "Check your HUNT STATS by @teeboo.eth",
   };
 });
 
