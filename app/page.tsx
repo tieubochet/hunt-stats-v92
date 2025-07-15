@@ -23,10 +23,10 @@ export async function generateMetadata({
 
   return {
     title: "Hunt Stats Frame v1",
-    description: "Check your HUNT STATS by @tieubochet.eth",
+    description: "Check your HUNT STATS by @teeboo.eth",
     openGraph: {
       title: "Hunt Stats Frame v1",
-      description: "Check your HUNT STATS by @tieubochet.eth",
+      description: "Check your HUNT STATS by @teeboo.eth",
       images: [`${framesUrl.origin}/api/og`],
     },
     other: {
