@@ -8,7 +8,7 @@ const latin = Baloo_2({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Hunt Stats Frame v1",
-  description: "Check your HUNT STATS by @tieubochet.eth",
+  description: "Check your HUNT STATS by @teeboo.eth",
 };
 
 export default function RootLayout({
