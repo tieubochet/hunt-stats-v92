@@ -12,7 +12,7 @@ export const GET = async (req: NextRequest) => {
     icon: "pulse",
     name: "Hunt Stats Frame v1",
     aboutUrl: `${appURL()}`,
-    description: "Check your HUNT STATS by @tieubochet.eth",
+    description: "Check your HUNT STATS by @teeboo.eth",
   });
 };
 
