@@ -115,11 +115,11 @@ export async function GET(req: NextRequest) {
         2
       )
     );
-    /*
+    
     console.log(
       `Fetching Lifetime Moxie earnings data from Airstack for entityId: ${entityId}`
     );
-    */
+    
     const [lifetimeData] = await Promise.all([
       fetchQuery(moxieQuery, { entityId, timeframe: "LIFETIME" }),
     ]);
