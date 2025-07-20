@@ -7,7 +7,7 @@ if (!apiKey) {
 }
 init(apiKey);
 
-//console.log("Airstack API initialized for Moxie earnings");
+console.log("Airstack API initialized for Moxie earnings");
 
 const moxieQuery = `
 query MyQuery($entityId: String!, $timeframe: FarcasterMoxieEarningStatsTimeframe!) {
@@ -22,7 +22,7 @@ query MyQuery($entityId: String!, $timeframe: FarcasterMoxieEarningStatsTimefram
 `;
 
 export async function GET(req: NextRequest) {
-  //console.log(`Moxie earnings API route called at ${new Date().toISOString()}`);
+  console.log(`Moxie earnings API route called at ${new Date().toISOString()}`);
   console.log(`Full URL: ${req.url}`);
 
   const entityId = req.nextUrl.searchParams.get("entityId");
@@ -125,7 +125,7 @@ export async function GET(req: NextRequest) {
     ]);
 
     if (lifetimeData.error) {
-      //console.error("Airstack API error (lifetime Moxie earnings data):", lifetimeData.error);
+      console.error("Airstack API error (lifetime Moxie earnings data):", lifetimeData.error);
       return NextResponse.json(
         { error: lifetimeData.error.message },
         { status: 500 }
@@ -161,7 +161,7 @@ export async function GET(req: NextRequest) {
         lifetimeEarnings,
     });
   } catch (error) {
-    //console.error("Unexpected error:", error);
+    console.error("Unexpected error:", error);
     return NextResponse.json(
       { error: "An unexpected error occurred" },
       { status: 500 }
