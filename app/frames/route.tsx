@@ -194,7 +194,7 @@ const frameHandler = frames(async (ctx) => {
   const shareText = `👏 Check your HUNT STATS 👇 If you like my frame, please share and follow @teeboo.eth`;
 
   const cache = new Date().getTime();
-
+  const huntweb = 'https://hunt.town/';
   const shareUrl = `https://warpcast.com/~/compose?text=${shareText}&embeds[]=${encodeURIComponent(
     appURL() +
       (fid
@@ -209,11 +209,12 @@ const frameHandler = frames(async (ctx) => {
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
         Check🔎
       </Button>,
-      
       <Button action="link" target={shareUrl}>
         Share
       </Button>,
-      
+      <Button action="link" target={huntweb}>
+        Home
+      </Button>
     );
   } else {
     buttons.push(
@@ -224,7 +225,9 @@ const frameHandler = frames(async (ctx) => {
       <Button action="link" target={shareUrl}>
         Share
       </Button>,
-      
+      <Button action="link" target={huntweb}>
+        Home
+      </Button>
     );
   }
 
