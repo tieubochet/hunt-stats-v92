@@ -44,7 +44,7 @@ const frameHandler = frames(async (ctx) => {
         throw new Error("No user data found");
       }
     } catch (err) {
-      //console.error("Error fetching data:", err);
+      console.error("Error fetching data:", err);
       error = (err as Error).message;
     } finally {
       isLoading = false;
@@ -58,7 +58,7 @@ const frameHandler = frames(async (ctx) => {
       let fid = parsedUrl.searchParams.get("userfid");
       return fid;
     } catch (e) {
-      //console.error("Error parsing URL:", e);
+      console.error("Error parsing URL:", e);
       return null;
     }
   };
@@ -69,17 +69,17 @@ const frameHandler = frames(async (ctx) => {
     fid = ctx.message.requesterFid.toString();
   } else if (ctx.url) {
     fid = extractFid(ctx.url.toString());
-    //console.log("Extracted FID from URL:", fid);
+    console.log("Extracted FID from URL:", fid);
   } else {
-    //console.log("No ctx.url available");
+    console.log("No ctx.url available");
   }
 
   if (!fid && (ctx.state as State)?.lastFid) {
     fid = (ctx.state as State).lastFid ?? null;
-    //console.log("Using FID from state:", fid);
+    console.log("Using FID from state:", fid);
   }
 
-  //console.log("Final FID used:", fid);
+  console.log("Final FID used:", fid);
 
   const shouldFetchData =
     fid && (!userData || (userData as UserData).fid !== fid);
@@ -187,7 +187,7 @@ const frameHandler = frames(async (ctx) => {
           <div tw="flex text-[44px] justify-end absolute top-163 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.remaining_allowance)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-185 right-66 text-[#FF0F15]">{formatNumber(huntstatsJSON.tipped)} 👏</div>
           <div tw="flex text-[44px] justify-end absolute top-205 right-66 text-[#f00707]">{formatNumber(huntstatsJSON.received)} 👏</div>
-          <div tw="flex mb-0 absolute bottom-5 left-5 text-[26px] text-[#333333]">Frame created by @teeboo.eth</div>
+          <div tw="flex mb-0 absolute bottom-5 left-5 text-[26px] text-[#333333]">@teeboo.eth</div>
       </div>
     );
   };
@@ -221,7 +221,6 @@ const frameHandler = frames(async (ctx) => {
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
         Check🔎
       </Button>,
-      
       <Button action="link" target={shareUrl}>
         Share
       </Button>,
