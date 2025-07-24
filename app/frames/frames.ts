@@ -7,7 +7,7 @@ import {
 export const frames = createFrames({
   basePath: "/frames",
   debug: process.env.NODE_ENV === "development",
-  /*
+  
   middleware: [
     farcasterHubContext({
       ...(process.env.NODE_ENV === "production"
@@ -26,5 +26,5 @@ export const frames = createFrames({
     
     warpcastComposerActionState(),
   ],
-  */
+  
 });
