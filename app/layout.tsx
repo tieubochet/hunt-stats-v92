@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Baloo_2 } from 'next/font/google'
-import { Rubik_Bubbles } from "next/font/google";
+import { Baloo_2 } from 'next/font/google'
 import "./globals.css";
 
 const latin = Baloo_2({ weight: ["400"], subsets: ["latin"] });
