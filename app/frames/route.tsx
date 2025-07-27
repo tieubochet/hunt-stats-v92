@@ -148,10 +148,10 @@ const frameHandler = frames(async (ctx) => {
     if (huntstatsdata.ok) {
       huntstatsJSON = await huntstatsdata.json();
     } else {
-      //console.error('Error:', huntstatsdata.status);
+      console.error('Error:', huntstatsdata.status);
     }
   } catch (error) {
-    //console.error('Fetch data error:', error);
+    console.error('Fetch data error:', error);
   }
 
   const SplashScreen = () => (
@@ -176,7 +176,7 @@ const frameHandler = frames(async (ctx) => {
             tw="w-25 h-25 rounded-3 absolute top-85 left-60"
           />
           <div tw="flex mb-0 absolute top-4 right-5">{dateNow}</div>
-          <div tw="flex mb-0 absolute top-4 left-63">#Season 13 ({curr})</div>
+          <div tw="flex mb-0 absolute top-4 left-63">#Season 14 ({curr})</div>
           <div tw="flex text-[35px] absolute top-87 left-95 text-black">{userData?.username}</div>
           <div tw="flex text-[26px] absolute top-100 left-95 text-black">FID: {userData?.fid}</div>
           <div tw="flex mb-0 absolute bottom-5 right-5 text-[26px] text-[#333333]">Reset time: {timeLeft}</div>
