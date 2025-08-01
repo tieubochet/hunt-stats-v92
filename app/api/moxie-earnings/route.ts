@@ -41,14 +41,14 @@ export async function GET(req: NextRequest) {
       allEarningsAmount: number;
     }
 
-    let todayEarnings: MoxieEarningStat | null = null;
+    //let todayEarnings: MoxieEarningStat | null = null;
     let weeklyEarnings: MoxieEarningStat | null = null;
     let lifetimeEarnings: MoxieEarningStat | null = null;
 
     console.log(
       `Fetching Today's Moxie earnings data from Airstack for entityId: ${entityId}`
     );
-
+    /*
     const [todayData] = await Promise.all([
       fetchQuery(moxieQuery, { entityId, timeframe: "TODAY" }),
     ]);
@@ -80,7 +80,7 @@ export async function GET(req: NextRequest) {
         2
       )
     );
-
+  */
     console.log(
       `Fetching Weekly Moxie earnings data from Airstack for entityId: ${entityId}`
     );
