@@ -42,7 +42,7 @@ export async function GET(req: NextRequest) {
     }
 
     //let todayEarnings: MoxieEarningStat | null = null;
-    let weeklyEarnings: MoxieEarningStat | null = null;
+    //let weeklyEarnings: MoxieEarningStat | null = null;
     let lifetimeEarnings: MoxieEarningStat | null = null;
 
     console.log(
@@ -80,7 +80,7 @@ export async function GET(req: NextRequest) {
         2
       )
     );
-  */
+  
     console.log(
       `Fetching Weekly Moxie earnings data from Airstack for entityId: ${entityId}`
     );
@@ -115,7 +115,7 @@ export async function GET(req: NextRequest) {
         2
       )
     );
-    
+    */
     console.log(
       `Fetching Lifetime Moxie earnings data from Airstack for entityId: ${entityId}`
     );
