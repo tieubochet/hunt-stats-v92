@@ -7,7 +7,7 @@ if (!apiKey) {
 }
 init(apiKey);
 
-console.log("Airstack API initialized");
+//console.log("Airstack API initialized");
 
 const userQuery = `
 query GetUserSocialCapital($userId: String!) {
