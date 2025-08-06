@@ -153,10 +153,11 @@ export async function GET(req: NextRequest) {
     );
 
     return NextResponse.json({
-      today:
+      /* today:
         todayEarnings,
       weekly:
         weeklyEarnings,
+        */
       lifetime:
         lifetimeEarnings,
     });
