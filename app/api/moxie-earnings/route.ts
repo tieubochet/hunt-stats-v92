@@ -35,7 +35,7 @@ export async function GET(req: NextRequest) {
       { status: 400 }
     );
   }
-
+/*
   try {
     interface MoxieEarningStat {
       allEarningsAmount: number;
@@ -43,11 +43,12 @@ export async function GET(req: NextRequest) {
 
     //let todayEarnings: MoxieEarningStat | null = null;
     //let weeklyEarnings: MoxieEarningStat | null = null;
-    let lifetimeEarnings: MoxieEarningStat | null = null;
-
+    //let lifetimeEarnings: MoxieEarningStat | null = null;
+    
     console.log(
       `Fetching Today's Moxie earnings data from Airstack for entityId: ${entityId}`
     );
+    */
     /*
     const [todayData] = await Promise.all([
       fetchQuery(moxieQuery, { entityId, timeframe: "TODAY" }),
@@ -115,7 +116,7 @@ export async function GET(req: NextRequest) {
         2
       )
     );
-    */
+    
     console.log(
       `Fetching Lifetime Moxie earnings data from Airstack for entityId: ${entityId}`
     );
@@ -151,13 +152,13 @@ export async function GET(req: NextRequest) {
         2
       )
     );
-
+  */ /*
     return NextResponse.json({
-      /* today:
+      today:
         todayEarnings,
       weekly:
         weeklyEarnings,
-        */
+        
       lifetime:
         lifetimeEarnings,
     });
@@ -168,4 +169,5 @@ export async function GET(req: NextRequest) {
       { status: 500 }
     );
   }
+    */
 }
