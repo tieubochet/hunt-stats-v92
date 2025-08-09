@@ -220,9 +220,6 @@ const frameHandler = frames(async (ctx) => {
       </Button>,
       <Button action="link" target={shareUrl}>
         Share
-      </Button>,
-      <Button action="link" target={huntweb}>
-        Home
       </Button>
     );
   }
