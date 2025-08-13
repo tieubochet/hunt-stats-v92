@@ -9,7 +9,7 @@ export const GET = async (req: NextRequest) => {
     action: {
       type: "post",
     },
-    icon: "pulse",
+    icon: "push",
     name: "Hunt Stats Frame v1",
     aboutUrl: `${appURL()}`,
     description: "Check your HUNT STATS by @tieubochet.eth",
